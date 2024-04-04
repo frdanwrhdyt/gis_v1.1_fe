@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { useState, useEffect, useRef } from 'react'
 import { 
     MapContainer, 
@@ -11,8 +12,8 @@ import {
 import 'leaflet/dist/leaflet.css'
 import Fetch from '../fetch/fetch'
 import L from 'leaflet';
-import '../components/ruler/ruler'
-import '../components/ruler/ruler.css'
+// import '../components/ruler/ruler'
+// import '../components/ruler/ruler.css'
 import Legend from '../components/legend/legend';
 import FeatureInfo from '../components/featureInfo/featureInfo';
 
@@ -77,7 +78,7 @@ export default function Home(){
         <div className='w-full h-full'>
             <MapContainer ref={mapRef} zoomControl={false} center={position} zoom={5} scrollWheelZoom={false}>
                 <ZoomControl position='topright'/>
-                <Ruler/>
+                {/* <Ruler/> */}
                 <LayersControl
                 ref={layersControlRef}
                 position="topright"
@@ -118,14 +119,14 @@ function RenderOverlay({ layers }) {
     );
 }
 
-function Ruler(){
-    const map = useMap()
-    useEffect(() => {
-        const ruler = L.control.ruler().addTo(map);
+// function Ruler(){
+//     const map = useMap()
+//     useEffect(() => {
+//         const ruler = L.control.ruler().addTo(map);
 
-        return () => {
-          map.removeControl(ruler);
-        };
-      }, [map]);
-    return null
-}
+//         return () => {
+//           map.removeControl(ruler);
+//         };
+//       }, [map]);
+//     return null
+// }
