@@ -27,6 +27,8 @@ export default function Layout(){
             localStorage.removeItem('access');
             Cookies.remove('refresh');
         } catch (error) {
+            console.error('Error logging out:', error);
+        } finally {
             setIsLoading(false);
             navigate('/login', { replace: true });
         }

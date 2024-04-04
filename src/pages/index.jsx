@@ -51,8 +51,8 @@ export default function Home(){
     },[])
 
 
+    const access = localStorage.getItem('access')
     useEffect(()=>{
-        const access = localStorage.getItem('access')
         const fetch = async() => {
             try{    
                 const response = await Fetch({
@@ -71,7 +71,7 @@ export default function Home(){
             }
         }
         fetch()
-    },[])
+    },[access])
     
     return (
         <div className='w-full h-full'>
