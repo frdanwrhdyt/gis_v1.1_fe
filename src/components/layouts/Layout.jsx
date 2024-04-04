@@ -74,7 +74,7 @@ export default function Layout(){
             }
         }
         fetchData()
-    }, [])
+    }, [setAuth])
     if(auth){
         return(
             <div className="h-screen w-screen relative bg-gray-100">

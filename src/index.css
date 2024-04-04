@@ -14,6 +14,28 @@
 .leaflet-control-layers {
   text-align: left;
 }
+.legend {
+  text-align: left;
+  line-height: 18px;
+  color: #555;
+}
+.feature-info{
+  background: white;
+  border-radius: 5px;
+  padding: 12px;
+  width: 280px;
+  min-height: 120px;
+  max-height: 50vh;
+  overflow: auto;
+}
+.info{
+  background: white;
+  border-radius: 5px;
+  padding: 12px 12px;
+  width: 280px;
+  height: 40vh;
+  overflow-y: auto;
+}
 
 /* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
